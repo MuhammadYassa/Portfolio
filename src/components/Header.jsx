@@ -6,7 +6,7 @@ export default function () {
   return (
     <div id="home" className="spacer layerHeader h-[100vh]">
       <Hero>
-      <NavBar />
+        <NavBar />
       </Hero>
     </div>
   );

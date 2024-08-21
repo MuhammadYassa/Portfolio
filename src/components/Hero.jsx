@@ -19,20 +19,20 @@ export default function Hero(props) {
               <Bubble2></Bubble2>
             </Reveal>
           </div>
-          <div className='cursor-default justify-center'>
+          <div className='w-full cursor-default flex flex-col items-center px-4'>
             <Reveal>
-              <h1 className="md:text-md font-normal text-nowrap text-[#ffffff] text-justify">
+              <h1 className="md:text-md font-normal text-nowrap text-[#ffffff]">
                 <strong>Hi</strong>, I'm Muhammad Yassa, a Software Engineer
               </h1>
             </Reveal>
             <Reveal>
-              <h1 className="md:text-3xl font-bold text-nowrap text-[#ffffff] text-justify">
+              <h1 className="md:text-3xl font-bold text-nowrap text-[#ffffff]">
                 Passionate about creating impactful <br></br> code that drives real-world results.
               </h1>
             </Reveal>
             <Reveal>
-              <h1 className="md:text-md font-medium text-nowrap text-[#ffffff] text-justify">
-                Turning complex problems into innovative solutions.
+              <h1 className="md:text-md font-medium text-nowrap text-[#ffffff]">
+                Turning complex problems into <br></br> innovative solutions.
               </h1>
             </Reveal>
           </div>
