@@ -8,31 +8,31 @@ export default function Projects() {
       ProjectName: "Weather App",
       ProjectDescription: "Developed Java weather app with real-time data." ,
       ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/WeatherApp" ,
-      ProjectImage: "/src/assets/WeatherApp.png",
+      ProjectImage: "/WeatherApp.png",
     },
     {
       ProjectName: "Tile Matching Game" ,
       ProjectDescription: "Built tile-matching game with efficient algorithms and dynamic colors." ,
       ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/TileMatchingGame" ,
-      ProjectImage: "/src/assets/TileMatchingGame.jpeg" ,
+      ProjectImage: "/TileMatchingGame.jpeg" ,
     },
     {
       ProjectName: "Calculator App" ,
       ProjectDescription: "Designed robust Java calculator with intuitive interface." ,
       ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/CalculatorApp",
-      ProjectImage: "/src/assets/CalculatorApp.jpg" , 
+      ProjectImage: "/CalculatorApp.jpg" , 
     },
     {
       ProjectName: "Pangram Maker",
       ProjectDescription: "Created Java pangram generator with integrated help.",
       ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/PangramMaker",
-      ProjectImage: "/src/assets/PangramMaker.jpg" , 
+      ProjectImage: "/PangramMaker.jpg" , 
     },
     {
       ProjectName: "8-Queens Problem",
       ProjectDescription: "Solved 8 Queens in C++ with optimized backtracking.",
       ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/8QueensProblemWithFancyPrint",
-      ProjectImage: "/src/assets/8QueensProblem.png" , 
+      ProjectImage: "/8QueensProblem.png" , 
     },
   ]
 

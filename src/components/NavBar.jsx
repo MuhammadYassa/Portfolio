@@ -60,8 +60,8 @@ export default function NavBar() {
     <div className = "bg-transparent backdrop-blur-sm sticky top-0 z-[100] flex justify-between flex-row items-center text-[#ffffff] text-sm h-[10vh] border-b border-white pr-9">
       <nav>
         <Link to ="#home" smooth>
-          <img src='/src/assets/Logo3.png' alt='Logo' className="min-w-64 w-64 pl-9 hidden sm:flex" />
-          <img src='/src/assets/Logo4.png' alt='Logo' className = "min-w-14 w-14 sm:hidden"/>
+          <img src='/Logo3.png' alt='Logo' className="min-w-64 w-64 pl-9 hidden sm:flex" />
+          <img src='/Logo4.png' alt='Logo' className = "min-w-14 w-14 sm:hidden"/>
         </Link>
       </nav>
       <div className = "flex-row justify-center items-center hidden sm:flex">
@@ -95,7 +95,7 @@ export default function NavBar() {
             className='origin-top fixed z-[3000] left-0 top-0 w-full h-screen bg-[#5b42f5] text-[#0d0a20] p-10'>
             <div className='flex h-full flex-col'>
               <div className='flex justify-between'>
-                <img src='/src/assets/Logo4.png' alt='Logo' className = "min-w-14 w-14"/>
+                <img src='/Logo4.png' alt='Logo' className = "min-w-14 w-14"/>
                 <button onClick={toggleMenu}>
                   <i className="fa-solid fa-x text-xl bg-[#5b42f5] hover:bg-[#ffffff] hover:text-[#0d0a20] text-white px-3 py-1 rounded-3xl transition-all ease-in-out"></i>
                 </button>
