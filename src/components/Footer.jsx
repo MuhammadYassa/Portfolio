@@ -8,8 +8,8 @@ export default function Footer() {
         2024 Muhammad Yassa. All rights reserved.
       </div>
       <div> 
-        <img src='/Portfolio/logo4.png' className= "min-w-24 w-24 inline-block md:hidden"/>
-        <img src='/Portfolio/logo3.png' className= "min-w-72 w-72 hidden md:inline-block"/>
+        <img src='/Portfolio/logo4.png' alt='Logo' className= "min-w-24 w-24 inline-block md:hidden"/>
+        <img src='/Portfolio/logo3.png' alt='Logo' className= "min-w-72 w-72 hidden md:inline-block"/>
       </div>
       <div className="text-2xl">
         <a href='https://www.instagram.com/muhammed_yassa/'>
