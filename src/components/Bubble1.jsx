@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "/bubble.module.css";
 
 const Bubble1 = () => {
   return (
