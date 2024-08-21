@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+body{
+  margin: 0;
+}
+
+.navItems,
+.submitButton{
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+  color: #0d0a20;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  text-wrap:nowrap;
+}
+
+.navItems:hover, .submitButton:hover{
+  background-color: #0d0a20;
+  color: white;
+  border-width: 2px;
+  border-color: 1px;
+}
+
+.spacer{
+  aspect-ratio: 960/540;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+}
+
+.gradient{
+  background: rgb(92,81,214);
+  background: radial-gradient(circle, rgba(92,81,214,1) 0%, rgba(13,10,32,1) 100%);
+}
+
+.shadow{
+  box-shadow: 2px 10px 10px hsla(0, 0%, 0%, 0.632);
+}
+
+.layerHeader{
+  background-image: url('./assets/wave-haikei.svg');
+}
+
+.layerAbout{
+  background-image: url('./assets/circle-scatter-haikei.svg');
+}
+
+.layerContact{
+  background-image: url('./assets/layered-waves-haikei.svg');
+}
+
+.typewriter{
+  letter-spacing: 10px;
+  animation: typing 2s steps(31),
+  cursor 0.4s step-end infinite alternate;
+  animation-fill-mode: backwards;
+  animation-delay: 0.25s;
+}
+
+.typewriterSmall{
+  letter-spacing: 10px;
+  animation: typing 2s steps(10),
+  cursor 0.4s step-end infinite alternate;
+  animation-fill-mode: backwards;
+  animation-delay: 0.25s;
+}
+
+@keyframes cursor {
+  50% {border-color: transparent;}
+}
+
+@keyframes typing {
+  from { width: 0;}
+}
+
+.animateBorder {
+  border-width: 20px;
+  animation: borderDisappear 0.75s cubic-bezier(.6,-0.05,.31,1.04);
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes borderDisappear {
+  from {border-width: 20px;}
+  to {border-width: 0px;}
+}
