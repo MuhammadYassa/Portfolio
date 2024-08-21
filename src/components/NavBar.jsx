@@ -95,7 +95,7 @@ export default function NavBar() {
             className='origin-top fixed z-[3000] left-0 top-0 w-full h-screen bg-[#5b42f5] text-[#0d0a20] p-10'>
             <div className='flex h-full flex-col'>
               <div className='flex justify-between'>
-                <img src='/Portfolio/Logo4.png' alt='Logo' className = "min-w-14 w-14"/>
+                <img src='/Portfolio/logo4.png' alt='Logo' className = "min-w-14 w-14"/>
                 <button onClick={toggleMenu}>
                   <i className="fa-solid fa-x text-xl bg-[#5b42f5] hover:bg-[#ffffff] hover:text-[#0d0a20] text-white px-3 py-1 rounded-3xl transition-all ease-in-out"></i>
                 </button>
