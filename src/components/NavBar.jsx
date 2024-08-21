@@ -61,7 +61,7 @@ export default function NavBar() {
       <nav>
         <Link to ="#home" smooth>
           <img src='/Portfolio/Logo3.png' alt='Logo' className="min-w-64 w-64 pl-9 hidden sm:flex" />
-          <img src='/Portfolio/Logo4.png' alt='Logo' className = "min-w-14 w-14 sm:hidden"/>
+          <img src='/Portfolio/logo4.png' alt='Logo' className = "min-w-14 w-14 sm:hidden"/>
         </Link>
       </nav>
       <div className = "flex-row justify-center items-center hidden sm:flex">
