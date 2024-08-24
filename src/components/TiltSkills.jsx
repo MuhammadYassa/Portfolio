@@ -60,7 +60,7 @@ const TiltCard = () => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-[60vh] w-[45vw] min-h-[500px] min-w-[400px] rounded-xl bg-[#5b42f5]"
+      className="relative h-[60vh] w-[45vw] min-h-[450px] min-w-[275px] rounded-xl bg-[#5b42f5]"
     >
       <div
         style={{
@@ -74,10 +74,10 @@ const TiltCard = () => {
             transform: "translateZ(50px)",
           }}
         >
-          <h1 className="text-5xl font-['Montserrat'] font-bold my-4">
+          <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-bold my-4">
             SKILLS
           </h1>
-          <div className="text-5xl grid grid-cols-3 gap-9">
+          <div className="text-3xl md:text-5xl grid grid-cols-3 gap-9">
             <i className="fa-brands fa-js transition-all hover:scale-125 hover:text-[#f7df1e]"></i>
             <i className="fa-brands fa-java transition-all hover:scale-125 hover:text-[#5382a1]"></i>
             <i className="fa-brands fa-python transition-all hover:scale-125 hover:text-[#ffde57]"></i>

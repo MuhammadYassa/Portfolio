@@ -61,7 +61,7 @@ export default function NavBar() {
       <nav>
         <Link to ="#home" smooth>
           <img src='/Portfolio/Logo3.png' alt='Logo' className="min-w-64 w-64 pl-9 hidden sm:flex" />
-          <img src='/Portfolio/logo4.png' alt='Logo' className = "min-w-14 w-14 sm:hidden"/>
+          <img src='/Portfolio/logo4.png' alt='Logo' className = "w-20 pl-9 sm:hidden"/>
         </Link>
       </nav>
       <div className = "flex-row justify-center items-center hidden sm:flex">
@@ -83,7 +83,7 @@ export default function NavBar() {
       </div>
       <nav className= "sm:hidden">
         <button onClick={toggleMenu}>
-        <i className="fa-solid fa-bars text-xl bg-[#5b42f5] hover:bg-[#ffffff] hover:text-[#0d0a20] px-3 py-1 rounded-3xl transition-all ease-in-out"></i>
+        <i className="fa-solid fa-bars text-xl bg-transparent hover:bg-[#ffffff] hover:text-[#0d0a20] px-3 py-1 rounded-3xl transition-all ease-in-out"></i>
         </button>
         <AnimatePresence>
           {open && (
@@ -97,7 +97,7 @@ export default function NavBar() {
               <div className='flex justify-between'>
                 <img src='/Portfolio/logo4.png' alt='Logo' className = "min-w-14 w-14"/>
                 <button onClick={toggleMenu}>
-                  <i className="fa-solid fa-x text-xl bg-[#5b42f5] hover:bg-[#ffffff] hover:text-[#0d0a20] text-white px-3 py-1 rounded-3xl transition-all ease-in-out"></i>
+                  <i className="fa-solid fa-x text-xl bg-transparent hover:bg-[#ffffff] hover:text-[#0d0a20] text-white px-3 py-1 rounded-3xl transition-all ease-in-out"></i>
                 </button>
               </div>
               <motion.div variants={containerVars} initial= "initial" animate= "open" exit="initial" className='flex flex-col h-full justify-center font-bold font-["Montserrat"] items-center gap-9'>

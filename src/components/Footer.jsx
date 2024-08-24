@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div className = "h-[30vh] w-full bg-[#0d0a20] grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 justify-between px-8 items-center">
-      <div className="text-sm text-nowrap cursor-default">
+    <div className = "h-[35vh] w-full bg-[#0d0a20] grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 justify-between px-8 items-center">
+      <div className="text-xs cursor-default sm:text-sm ">
         <i className="fa-regular fa-copyright mx-1"></i>
         2024 Muhammad Yassa. All rights reserved.
       </div>
