@@ -34,7 +34,6 @@ body{
 }
 
 .spacer{
-  aspect-ratio: 960/540;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
