@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 
 export default function () {
   return (
-    <div id="home" className="spacer layerHeader h-fit w-full">
+    <div id="home" className="spacer layerHeader h-[100vh]">
       <Hero>
         <NavBar />
       </Hero>
