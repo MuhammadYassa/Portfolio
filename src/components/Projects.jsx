@@ -50,7 +50,7 @@ export default function Projects() {
     }),
   }
   return (
-    <div  id = "projects" className = "h-fit mb-52">
+    <div  id = "projects" className = "h-fit mb-52 w-full">
       <h1 className = "my-10 text-5xl font-['Montserrat'] font-semibold cursor-default">
         PROJECTS  
       </h1>

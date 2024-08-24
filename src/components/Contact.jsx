@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div  id = "contact" className="spacer layerContact h-fit">
+    <div  id = "contact" className="spacer layerContact h-fit w-full">
       <div className='cursor-default'>
         <div className= "grid grid-cols-1 sm:grid-cols-2">
           <div className='mx-10'>
