@@ -32,11 +32,11 @@ export default function (props) {
         animate = {controls}
         initial={{ translateY:200 }}
         transition={{ease: "circInOut", duration: 0.1 }}
-        className="absolute flex flex-col gap-2 min-h-[200px] z-30 min-w-[360px] h-[200px] w-[360px] rounded-md bg-[#5b42f5] pt-12 px-6 text-sm">
-            <div className = "font-extrabold text-2xl mx-auto">
+        className="absolute flex flex-col gap-2 min-[370px]:min-h-[200px] min-[370px]:min-w-[360px] min-[370px]:h-[200px] min-[370px]:w-[360px] min-h-[144px] min-w-[260px] h-[144px] w-[260px] rounded-md bg-[#5b42f5] pt-2 min-[370px]:pt-12 px-6 text-sm">
+            <div className = "font-extrabold text-lg min-[370px]:text-2xl mx-auto">
               {title}
             </div>
-            <div>
+            <div className='text-xs min-[370px]:text-md'>
               {desc}
             </div>
             <a href={href}>
@@ -47,7 +47,7 @@ export default function (props) {
         </motion.div>
         <img 
           src={image}
-          className="min-h-[200px] min-w-[360px] h-[200px] w-[360px] border-4 border-[#5b42f5] rounded-md"
+          className="min-[370px]:min-h-[200px] min-[370px]:min-w-[360px] min-[370px]:h-[200px] min-[370px]:w-[360px] min-h-[144px] min-w-[260px] h-[144px] w-[260px] border-4 border-[#5b42f5] rounded-md"
         />
       </div>
     </motion.div>
