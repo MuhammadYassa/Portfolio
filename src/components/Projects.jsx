@@ -57,7 +57,7 @@ export default function Projects() {
       <div className ="grid grid-cols-1 grid-rows-6 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 mx-12 my-12 gap-7 justify-items-center items-center">
         {projects.map((project,index) => {
           return (
-            <motion.div variants={fadeInAnimationsVariants} initial = "initial" whileInView="animate" viewport={{ once: false, amount: 0.5}} custom = {1}>
+            <motion.div variants={fadeInAnimationsVariants} initial = "initial" whileInView="animate" viewport={{ once: true, amount: 0.5}} custom = {index}>
               <Project title = {project.ProjectName} desc = {project.ProjectDescription} href = {project.ProjectHref} image = {project.ProjectImage}> Project {index+1} </Project>
             </motion.div>
           );
