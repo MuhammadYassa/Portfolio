@@ -60,7 +60,7 @@ const TiltCard = () => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-[60vh] w-[45vw] min-h-[450px] min-w-[275px] rounded-xl bg-[#5b42f5]"
+      className="relative h-[60vh] w-[45vw] min-h-[375px] min-w-[285px] rounded-xl bg-[#5b42f5]"
     >
       <div
         style={{
@@ -85,7 +85,7 @@ const TiltCard = () => {
             <i className="fa-brands fa-html5 transition-all hover:scale-125 hover:text-[#e34c26]"></i>
             <i className="fa-brands fa-react transition-all hover:scale-125 hover:text-[#61DBFB]"></i>
             <i className="fa-brands fa-git-alt transition-all hover:scale-125 hover:text-[#F1502F]"></i>
-            <i className="fa-solid fa-c text-2xl mt-2 transition-all hover:scale-125 hover:text-[#044F88]">
+            <i className="fa-solid fa-c text-lg md:text-2xl mt-2 transition-all hover:scale-125 hover:text-[#044F88]">
               ++
             </i>
           </div>

@@ -60,7 +60,7 @@ const TiltCard = () => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-[60vh] w-[45vw] min-h-[450px] min-w-[275px] rounded-xl bg-[#5b42f5]"
+      className="relative h-[60vh] w-[45vw] min-h-[375px] min-w-[285px] rounded-xl bg-[#5b42f5]"
     >
       <div
         style={{
@@ -76,7 +76,7 @@ const TiltCard = () => {
               ABOUT
             </h1>
             <h1 className = "text-md md:text-xl font-['Montserrat'] font-medium mx-4" >
-              I'm a full-stack developer based in New York with experience in Python, JavaScript, C++, and Java. Recently, I've developed a passion for back-end development, focusing on building scalable, robust solutions. My versatile skills allow me to tackle challenges from both front-end and back-end perspectives.
+              I'm a New York-based full-stack developer skilled in Python, JavaScript, C++, and Java, with a growing focus on scalable back-end solutions. I tackle challenges from both front-end and back-end perspectives.
             </h1>
           </div>
       </div>  
