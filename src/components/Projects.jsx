@@ -11,10 +11,10 @@ export default function Projects() {
       ProjectImage: "/WeatherApp.png",
     },
     {
-      ProjectName: "Tile Matching Game" ,
-      ProjectDescription: "Built tile-matching game with efficient algorithms and dynamic colors." ,
-      ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/TileMatchingGame" ,
-      ProjectImage: "/TileMatchingGame.jpeg" ,
+      ProjectName: "Asteroid Evader",
+      ProjectDescription: "Java game with basic physics, fall speed and asteroid avoidance.",
+      ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/AsteroidEvaders",
+      ProjectImage: "/AsteroidEvaders.png" , 
     },
     {
       ProjectName: "Calculator App" ,
@@ -23,10 +23,10 @@ export default function Projects() {
       ProjectImage: "/CalculatorApp.jpg" , 
     },
     {
-      ProjectName: "Pangram Maker",
-      ProjectDescription: "Created Java pangram generator with integrated help.",
-      ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/PangramMaker",
-      ProjectImage: "/PangramMaker.jpg" , 
+      ProjectName: "Tile Matching Game" ,
+      ProjectDescription: "Built tile-matching game with efficient algorithms and dynamic colors." ,
+      ProjectHref: "https://github.com/MuhammadYassa/Projects/tree/main/TileMatchingGame" ,
+      ProjectImage: "/TileMatchingGame.jpeg" ,
     },
     {
       ProjectName: "8-Queens Problem",
