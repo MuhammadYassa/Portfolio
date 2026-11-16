@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      react:
+        patterns: [react, react-dom]
+      vite:
+        patterns: [vite, "@vitejs/*"]
+      tailwind:
+        patterns: [tailwindcss, "@tailwindcss/*"]
+      browser-testing:
+        patterns: ["@playwright/*", playwright, playwright-core, "@axe-core/*"]
+    open-pull-requests-limit: 5
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

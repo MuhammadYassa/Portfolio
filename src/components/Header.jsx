@@ -1,13 +1,10 @@
-import React from "react";
 import Hero from "./Hero";
 import NavBar from "./NavBar";
-
-export default function () {
+export default function Header() {
   return (
-    <div id="home" className="spacer layerHeader h-[100vh] -mb-1">
-      <Hero>
-        <NavBar />
-      </Hero>
-    </div>
+    <header id="home">
+      <NavBar />
+      <Hero />
+    </header>
   );
 }

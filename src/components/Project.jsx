@@ -1,55 +1,170 @@
-import React, { useRef } from 'react'
-import { motion, useAnimation } from 'framer-motion';
-
-export default function (props) {
-
-  const {children, title, href, desc, image} = props;
-  const ref = useRef(null);
-  const controls = useAnimation();
-
-  const handleHoverStart = () => {
-    controls.start({ translateY: 0 });
-  };
-
-  const handleHoverEnd = () => {
-    controls.start({ translateY: 200 });
-  };
-  
-  return (
-    <motion.div
-    className='relative cursor-default'
-    onHoverStart={handleHoverStart}
-    onHoverEnd={handleHoverEnd}
-    onClick={handleHoverStart}
-    >
-      <h1 
-      className="absolute translate-x-[-50%] translate-y-[-50%] top-[100%] left-[50%] z-50 px-4 py-2 bg-[#5b42f5] rounded-3xl text-nowrap"> 
-        {children}
-      </h1>  
-      <div className='relative z-40 overflow-hidden cursor-default text-white font-medium'>
-        <motion.div 
-        ref={ref} 
-        animate = {controls}
-        initial={{ translateY:200 }}
-        transition={{ease: "circInOut", duration: 0.1 }}
-        className="absolute flex flex-col gap-2 min-[370px]:min-h-[200px] min-[370px]:min-w-[360px] min-[370px]:h-[200px] min-[370px]:w-[360px] min-h-[144px] min-w-[260px] h-[144px] w-[260px] rounded-md bg-[#5b42f5] pt-2 min-[370px]:pt-12 px-6 text-sm">
-            <div className = "font-extrabold text-lg min-[370px]:text-2xl mx-auto">
-              {title}
-            </div>
-            <div className='text-xs min-[370px]:text-md'>
-              {desc}
-            </div>
-            <a href={href}>
-              <button className= "bg-transparent border font-bold text-base px-3 py-1 rounded-2xl mx-auto hover:bg-white hover:text-[#5b42f5]">
-                Website
-              </button>
-            </a>
-        </motion.div>
-        <img 
-          src={image}
-          className="min-[370px]:min-h-[200px] min-[370px]:min-w-[360px] min-[370px]:h-[200px] min-[370px]:w-[360px] min-h-[144px] min-w-[260px] h-[144px] w-[260px] border-4 border-[#5b42f5] rounded-md"
-        />
+import Reveal from "./Reveal";
+function ProjectGraphic({ id }) {
+  // Engineering diagrams, deliberately not simulated product screenshots.
+  if (id === "watchmate")
+    return (
+      <div
+        className="project-graphic watchmate-graphic"
+        role="img"
+        aria-label="WatchMate architecture: React interface connects to a Spring Boot API, Redis cache, MySQL database, and background TMDB imports."
+      >
+        <div className="graphic-heading">
+          <span className="graphic-brand">
+            W<span>m</span>
+          </span>
+          <span>WATCHMATE / SYSTEM NOTES</span>
+        </div>
+        <div className="architecture">
+          <span className="diagram-node">React interface</span>
+          <span className="diagram-line">↓</span>
+          <span className="diagram-node main-node">Spring Boot API</span>
+          <div className="diagram-branches">
+            <span>
+              Redis
+              <br />
+              <small>cache</small>
+            </span>
+            <span>
+              MySQL
+              <br />
+              <small>persistence</small>
+            </span>
+            <span>
+              TMDB
+              <br />
+              <small>async imports</small>
+            </span>
+          </div>
+        </div>
+        <div className="graphic-footer">
+          <span className="status-dot" /> From “what should I watch?” to “one
+          more episode.”
+        </div>
       </div>
-    </motion.div>
-  )
+    );
+  if (id === "housing")
+    return (
+      <div
+        className="project-graphic housing-graphic"
+        role="img"
+        aria-label="NYC housing ingestion pipeline: discover official MapPLUTO releases, verify and validate data, then merge into PostGIS. Repeat imports produce zero duplicates."
+      >
+        <div className="graphic-heading">
+          <span className="map-cross" aria-hidden="true">
+            ⌖
+          </span>
+          <span>NYC / DATA FIELDNOTES</span>
+        </div>
+        <div className="data-count">
+          856,614<span>tax lots. One reliable foundation.</span>
+        </div>
+        <div className="pipeline">
+          <span>Discover</span>
+          <b>→</b>
+          <span>Validate</span>
+          <b>→</b>
+          <span>Merge</span>
+        </div>
+        <div className="graphic-footer">MapPLUTO → PostgreSQL / PostGIS</div>
+      </div>
+    );
+  return (
+    <div
+      className="project-graphic renter-graphic"
+      role="img"
+      aria-label="Renter dispute workflow: case and evidence from both parties inform an assessment and prefilled forms for human review."
+    >
+      <div className="graphic-heading">
+        <span className="map-cross" aria-hidden="true">
+          §
+        </span>
+        <span>RENTER DISPUTE / WORKFLOW</span>
+      </div>
+      <div className="case-flow">
+        <span>Case + evidence</span>
+        <span aria-hidden="true">↓</span>
+        <span>Assessment + filing path</span>
+        <span aria-hidden="true">↓</span>
+        <strong>Forms for human review</strong>
+      </div>
+      <div className="graphic-footer">
+        Structured assistance. Nonbinding assessments.
+      </div>
+    </div>
+  );
+}
+export default function Project({ project }) {
+  return (
+    <Reveal>
+      <article
+        id={project.id}
+        className={`project-card project-${project.id}`}
+        aria-labelledby={`${project.id}-title`}
+      >
+        <div className="project-visual">
+          <ProjectGraphic id={project.id} />
+          <p className="visual-caption">
+            Engineering diagram · not a product screenshot
+          </p>
+        </div>
+        <div className="project-content">
+          <div className="project-kicker">
+            <span>PROJECT {project.number}</span>
+            <span
+              className={`project-status ${project.status === "Live" ? "live" : ""}`}
+            >
+              {project.status === "Live" && <span className="status-dot" />}
+              {project.status}
+            </span>
+          </div>
+          <h3 id={`${project.id}-title`}>{project.name}</h3>
+          <p className="project-subtitle">{project.subtitle}</p>
+          <p>{project.description}</p>
+          {project.metrics && (
+            <dl className="metrics">
+              {project.metrics.map(([value, label]) => (
+                <div key={label}>
+                  <dt>{value}</dt>
+                  <dd>{label}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+          <ul className="highlights">
+            {project.highlights.map((highlight) => (
+              <li key={highlight}>{highlight}</li>
+            ))}
+          </ul>
+          {project.note && <p className="project-note">{project.note}</p>}
+          <ul className="tech-list" aria-label={`${project.name} technologies`}>
+            {project.technologies.map((tech) => (
+              <li key={tech}>{tech}</li>
+            ))}
+          </ul>
+          {(project.live || project.github) && (
+            <div className="project-links">
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit WatchMate <span aria-hidden="true">↗</span>
+                </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View source <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      </article>
+    </Reveal>
+  );
 }
