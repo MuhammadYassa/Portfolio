@@ -1,4 +1,4 @@
-// Content supplied by Muhammad in November 2026. No resume PDF was supplied.
+// Content supplied by Muhammad in November 2026. Resume: public/resume.pdf.
 export const profile = {
   contentYear: 2026,
   name: "Muhammad Yassa",
@@ -6,10 +6,14 @@ export const profile = {
   github: "https://github.com/MuhammadYassa",
   linkedin: "https://www.linkedin.com/in/muhammadyassa/",
   location: "New York City",
+  role: "Software Engineer & Computer Science Student",
+  introduction:
+    "I'm a computer science student at Queens College, graduating in May 2027. I build full-stack applications, backend systems, and data pipelines, with a particular interest in how software works behind the scenes.",
   resume: "/resume.pdf",
   about: [
-    "I like knowing what happens after you click the button. The API call, the database query, the background job that quietly keeps things moving — that’s usually where my curiosity takes me.",
-    "I’m a computer science student at Queens College, building across backend systems, full-stack applications, and data engineering. I enjoy getting a first version working, then figuring out what makes it dependable. Lately, that’s meant thinking more about data correctness and where applied AI can actually be useful.",
+    "I'm finishing my computer science degree at Queens College in May 2027. Most of my projects focus on backend and full-stack development. I like understanding how the APIs, databases, and background jobs fit together, and which decisions make an application reliable.",
+    "Recently, I've been working on WatchMate and an NYC housing data platform. They've given me a lot to learn about caching, background processing, and keeping data correct as a project grows.",
+    "Outside of programming, I enjoy anime, especially One Piece.",
   ],
   education: {
     school: "Queens College, City University of New York",
@@ -25,10 +29,9 @@ export const projects = [
     id: "watchmate",
     number: "01",
     name: "WatchMate",
-    subtitle: "A home for your next watch.",
     status: "Live",
     description:
-      "A movie and TV tracking platform I independently designed, built, and deployed — from the Spring Boot API to the React interface.",
+      "A full-stack movie and TV tracking application I independently designed, built, and deployed with Spring Boot, React, MySQL, and Redis.",
     github: "https://github.com/MuhammadYassa/WatchMate",
     live: "https://mywatchmate.us",
     technologies: [
@@ -57,13 +60,12 @@ export const projects = [
   {
     id: "housing",
     number: "02",
-    name: "NYC Housing Intelligence",
+    name: "NYC Housing Intelligence Platform",
     github:
       "https://github.com/MuhammadYassa/NYC-Housing-Intelligence-Platform",
-    subtitle: "Good answers start with reliable data.",
     status: "In development",
     description:
-      "An autonomous pipeline for publicly available NYC housing data. The first working foundation: discovering, validating, and importing MapPLUTO releases into PostGIS.",
+      "An automated data ingestion platform for collecting, validating, and processing public NYC housing data. The MapPLUTO pipeline is implemented; the broader platform is still in development.",
     technologies: [
       "Python",
       "PostgreSQL",
@@ -90,10 +92,9 @@ export const projects = [
     number: "03",
     name: "Renter Dispute Assistant",
     github: "https://github.com/MuhammadYassa/CSCI370S26_Final_Project",
-    subtitle: "Making the next step clearer.",
     status: "Academic team project · 3 engineers",
     description:
-      "A team-built case-management application for rental disputes, with evidence from both parties and official New York forms prepared for review.",
+      "A team-built web application for organizing rental disputes, managing evidence from both parties, and preparing official New York filing forms for review.",
     technologies: ["Node.js", "Express", "MySQL", "React", "Gemini API"],
     highlights: [
       "Contributed authenticated case workflows, case-level access controls, evidence-image uploads, and landlord responses.",

@@ -1,5 +1,7 @@
 # Verification — November 16, 2026
 
+> Historical first-modernization results. The subsequent dark-theme revision includes the current resume PDF and additional motion tests; see [REVISION.md](REVISION.md) and its referenced current local artifacts.
+
 This report covers the local Windows checkout. Production deployment, public TLS issuance, and GitHub Actions execution were not performed. Content uses the supplied task brief because no current resume PDF was present.
 
 ## Executed checks

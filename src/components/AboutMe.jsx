@@ -1,5 +1,6 @@
 import { profile, skills } from "../data/portfolio";
 import Reveal from "./Reveal";
+
 export default function AboutMe() {
   return (
     <section
@@ -8,29 +9,17 @@ export default function AboutMe() {
       aria-labelledby="about-title"
     >
       <div className="shell">
-        <p className="eyebrow">03 / THE PERSON BEHIND THE CODE</p>
         <div className="about-grid">
-          <div>
-            <h2 id="about-title">
-              Curious about
-              <br />
-              what’s underneath<span className="accent">.</span>
-            </h2>
+          <Reveal>
+            <h2 id="about-title">About Me</h2>
             {profile.about.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-            <details className="personal-note">
-              <summary>A small detail outside the code</summary>
-              <p>
-                I’m also a One Piece fan. There’s always room for one more
-                chapter.
-              </p>
-            </details>
-          </div>
-          <Reveal>
-            <aside className="education">
-              <span className="eyebrow">LEARNING, BUILDING, REPEATING</span>
-              <h3>Queens College</h3>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <aside className="education" aria-labelledby="education-title">
+              <h3 id="education-title">Education</h3>
+              <p className="school-name">Queens College</p>
               <p>City University of New York</p>
               <p>
                 {profile.education.degree}
@@ -50,16 +39,13 @@ export default function AboutMe() {
             </aside>
           </Reveal>
         </div>
-        <div className="skills-heading">
-          <h3>The tools I work with</h3>
-          <p>Chosen for the problem at hand.</p>
-        </div>
+        <h3 className="skills-heading">Technical Skills</h3>
         <dl className="skills-grid">
-          {Object.entries(skills).map(([category, items]) => (
-            <div key={category}>
+          {Object.entries(skills).map(([category, items], index) => (
+            <Reveal key={category} delay={(index % 3) * 0.045}>
               <dt>{category}</dt>
               <dd>{items.join(" · ")}</dd>
-            </div>
+            </Reveal>
           ))}
         </dl>
       </div>

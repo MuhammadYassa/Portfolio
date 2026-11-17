@@ -6,19 +6,10 @@ export default function Contact() {
       className="section shell contact"
       aria-labelledby="contact-title"
     >
-      <p className="eyebrow">04 / KEEP IN TOUCH</p>
-      <h2 id="contact-title">
-        Have something
-        <br />
-        worth building<span className="accent">?</span>
-      </h2>
+      <h2 id="contact-title">Contact</h2>
       <div className="contact-bottom">
         <div>
-          <p>
-            I’d like to hear about it. For opportunities,
-            <br />
-            questions, or a conversation about software:
-          </p>
+          <p>For opportunities or questions about my work, send me an email.</p>
           <a className="email-link" href={`mailto:${profile.email}`}>
             {profile.email} <span aria-hidden="true">↗</span>
           </a>

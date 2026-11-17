@@ -1,5 +1,7 @@
 # Implementation and code understanding checkpoint
 
+> Historical record of the first modernization. For the current dark palette, simplified copy, animation behavior, and available resume, see [REVISION.md](REVISION.md).
+
 ## What was retained and why
 
 This remains a single-page React/Vite portfolio. The existing Header, Hero, NavBar, AboutMe, Projects, Project, Reveal, Contact, and Footer component roles were retained and refactored. The purple identity and interactive name lettering remain in a quieter form. Tailwind CSS and Framer Motion remain; no new production framework or service was added.

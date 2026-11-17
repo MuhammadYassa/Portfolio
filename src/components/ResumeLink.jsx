@@ -4,10 +4,11 @@ export default function ResumeLink() {
     <a
       className="button button-outline"
       href={profile.resume}
+      download="Muhammad-Yassa-Resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Resume PDF <span aria-hidden="true">↗</span>
+      Download Resume <span aria-hidden="true">↓</span>
     </a>
   ) : (
     <a

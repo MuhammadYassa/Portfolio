@@ -9,15 +9,8 @@ export default function Projects() {
     >
       <div className="section-heading">
         <div>
-          <p className="eyebrow">01 / SELECTED WORK</p>
-          <h2 id="projects-title">
-            A few things I’ve built<span className="accent">.</span>
-          </h2>
+          <h2 id="projects-title">Projects</h2>
         </div>
-        <p>
-          Real projects. Interesting problems.
-          <br />A closer look under the hood.
-        </p>
       </div>
       <div className="project-list">
         {projects.map((project) => (

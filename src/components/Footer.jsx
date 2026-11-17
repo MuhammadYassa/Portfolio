@@ -5,7 +5,6 @@ export default function Footer() {
       <span>
         © {profile.contentYear} {profile.name}
       </span>
-      <span>A work in progress. In the best way.</span>
       <a href="#home">Back to top ↑</a>
     </footer>
   );
