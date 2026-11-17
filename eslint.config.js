@@ -8,6 +8,7 @@ export default [
     ignores: [
       "dist/**",
       "node_modules/**",
+      ".restoration-reference/**",
       "test-results/**",
       "playwright-report/**",
     ],

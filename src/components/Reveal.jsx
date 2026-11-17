@@ -1,16 +1,28 @@
-import { m, useReducedMotion } from "framer-motion";
-// Content remains visible in prerendered HTML and if IntersectionObserver never fires.
-export default function Reveal({ children, delay = 0, className }) {
-  const reduce = useReducedMotion();
+import { useEffect } from "react";
+import { useInView, useReducedMotion } from "framer-motion";
+import { useAnimate } from "framer-motion/mini";
+// Server content stays visible. Animation progressively enhances each block once.
+export default function Reveal({ children, className = "", delay = 0 }) {
+  const [scope, animate] = useAnimate();
+  const visible = useInView(scope, { once: true, amount: 0.12 });
+  const reduced = useReducedMotion();
+  useEffect(() => {
+    if (reduced) {
+      scope.current.style.removeProperty("opacity");
+      scope.current.style.removeProperty("transform");
+      return;
+    }
+    if (!visible) return;
+    const animation = animate(
+      scope.current,
+      { opacity: [0, 1], transform: ["translateY(18px)", "translateY(0px)"] },
+      { duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] },
+    );
+    return () => animation.stop();
+  }, [animate, delay, reduced, scope, visible]);
   return (
-    <m.div
-      className={className}
-      initial={false}
-      whileInView={reduce ? undefined : { opacity: [0.65, 1], y: [14, 0] }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.42, delay, ease: [0.22, 1, 0.36, 1] }}
-    >
+    <div className={className} ref={scope}>
       {children}
-    </m.div>
+    </div>
   );
 }

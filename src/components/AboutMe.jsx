@@ -1,53 +1,51 @@
 import { profile, skills } from "../data/portfolio";
 import Reveal from "./Reveal";
-
 export default function AboutMe() {
   return (
     <section
-      id="about"
-      className="section about-section"
+      className="about-section"
+      id="aboutme"
       aria-labelledby="about-title"
     >
       <div className="shell">
-        <div className="about-grid">
-          <Reveal>
+        <div className="about-layout">
+          <Reveal className="about-copy">
             <h2 id="about-title">About Me</h2>
-            {profile.about.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+            {profile.about.map((text) => (
+              <p key={text}>{text}</p>
             ))}
           </Reveal>
-          <Reveal delay={0.06}>
-            <aside className="education" aria-labelledby="education-title">
-              <h3 id="education-title">Education</h3>
-              <p className="school-name">Queens College</p>
-              <p>City University of New York</p>
-              <p>
-                {profile.education.degree}
-                <br />
-                Expected {profile.education.graduation}
-              </p>
-              <dl>
-                <div>
-                  <dt>GPA</dt>
-                  <dd>{profile.education.gpa}</dd>
-                </div>
-                <div>
-                  <dt>Honors</dt>
-                  <dd>{profile.education.honors}</dd>
-                </div>
-              </dl>
-            </aside>
+          <Reveal className="education" delay={0.08}>
+            <h2>Education</h2>
+            <div className="education-mark" aria-hidden="true">
+              QC<span>’27</span>
+            </div>
+            <h3>{profile.education.school}</h3>
+            <p>{profile.education.degree}</p>
+            <dl>
+              <div>
+                <dt>Expected graduation</dt>
+                <dd>{profile.education.graduation}</dd>
+              </div>
+              <div>
+                <dt>GPA</dt>
+                <dd>{profile.education.gpa}</dd>
+              </div>
+            </dl>
+            <p className="honors">{profile.education.honors}</p>
           </Reveal>
         </div>
-        <h3 className="skills-heading">Technical Skills</h3>
-        <dl className="skills-grid">
-          {Object.entries(skills).map(([category, items], index) => (
-            <Reveal key={category} delay={(index % 3) * 0.045}>
-              <dt>{category}</dt>
-              <dd>{items.join(" · ")}</dd>
-            </Reveal>
-          ))}
-        </dl>
+        <div className="skills">
+          <h2>Technical Skills</h2>
+          <dl className="skills-list">
+            {Object.entries(skills).map(([group, items], index) => (
+              <Reveal key={group} delay={(index % 3) * 0.04}>
+                <dt>{group}</dt>
+                <dd>{items.join(" · ")}</dd>
+              </Reveal>
+            ))}
+          </dl>
+        </div>
       </div>
     </section>
   );

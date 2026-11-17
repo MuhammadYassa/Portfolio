@@ -48,8 +48,8 @@ export const projects = [
     metrics: [
       ["100", "users in two months"],
       ["4,298", "episodes tracked"],
-      ["420 → 28 ms", "movie-detail latency with Redis"],
     ],
+    benchmark: { uncachedMs: 420, cachedMs: 28 },
     highlights: [
       "Hashed, atomically rotated refresh tokens, JWT authentication, and Bucket4j rate limiting.",
       "Large multi-season imports run in the background, with HTTP 202 responses and polling to keep the interface responsive.",

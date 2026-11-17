@@ -3,31 +3,28 @@ import Reveal from "./Reveal";
 export default function Experience() {
   return (
     <section
+      className="experience section shell"
       id="experience"
-      className="section shell"
       aria-labelledby="experience-title"
     >
       <div className="section-heading">
-        <div>
-          <h2 id="experience-title">Experience</h2>
-        </div>
+        <h2 id="experience-title">Experience</h2>
       </div>
-      <Reveal>
-        <article className="experience-entry">
-          <div>
-            <span className="eyebrow">{experience.dates}</span>
-            <h3>{experience.role}</h3>
-            <p className="company">{experience.company}</p>
-          </div>
-          <div>
-            <p>{experience.context}</p>
-            <ul className="highlights">
-              {experience.highlights.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </article>
+      <Reveal className="experience-layout">
+        <div className="experience-meta">
+          <p>{experience.dates}</p>
+          <span>Internship · four-engineer team</span>
+        </div>
+        <div className="experience-entry">
+          <h3>{experience.role}</h3>
+          <p className="company">{experience.company}</p>
+          <p className="experience-context">{experience.context}</p>
+          <ul className="project-highlights">
+            {experience.highlights.map((text) => (
+              <li key={text}>{text}</li>
+            ))}
+          </ul>
+        </div>
       </Reveal>
     </section>
   );

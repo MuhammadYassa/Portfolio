@@ -3,14 +3,18 @@ import { readFile, access } from "node:fs/promises";
 import { profile } from "../src/data/portfolio.js";
 
 const html = await readFile("dist/index.html", "utf8");
-assert(html.includes('http-equiv="Content-Security-Policy"'), "Production CSP is required");
+assert(
+  html.includes('http-equiv="Content-Security-Policy"'),
+  "Production CSP is required",
+);
 assert.equal(
   (html.match(/<h1[ >]/g) || []).length,
   1,
   "Exactly one primary heading is required",
 );
 assert(
-  html.includes("856,614") && html.includes("DNR Events LLC"),
+  html.replace(/<[^>]*>|<!--.*?-->/g, "").includes("856,614") &&
+    html.includes("DNR Events LLC"),
   "Prerender must contain portfolio content",
 );
 assert(
@@ -32,7 +36,7 @@ for (const asset of [
   "robots.txt",
   "sitemap.xml",
   "social-card.png",
-  "favicon.svg",
+  "favicon.png",
 ])
   await access(`dist/${asset}`);
 if (profile.resume) {
