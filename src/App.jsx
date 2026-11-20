@@ -6,6 +6,7 @@ import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import MiniatureCity from "./components/city/MiniatureCity";
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
@@ -16,6 +17,7 @@ export default function App() {
         <Navigation />
         <main id="main">
           <Hero />
+          <MiniatureCity />
           <Projects />
           <Experience />
           <AboutMe />
