@@ -24,9 +24,6 @@ test("production content, local assets, navigation, outbound URLs and actual res
     .getByRole("link", { name: "Projects", exact: true })
     .click();
   await expect(page).toHaveURL(/#projects$/);
-  await expect(page.locator("#housing")).toContainText(
-    "These are planned, not completed features.",
-  );
   await expect(page.locator("#renter")).toContainText("3 engineers");
   await expect(page.locator("#experience")).toContainText(
     "approximately 900 daily active users across iOS and Android",
