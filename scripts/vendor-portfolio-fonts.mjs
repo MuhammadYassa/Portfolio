@@ -7,6 +7,7 @@ let stylesheet =
 for (const [family, query, directory] of [
   ["Manrope", "Manrope:wght@400..800", "manrope"],
   ["Instrument Serif", "Instrument+Serif:ital@0;1", "instrumentserif"],
+  ["Bricolage Grotesque", "Bricolage+Grotesque:opsz,wght@96,800", "bricolagegrotesque"],
 ]) {
   const response = await fetch(
     `https://fonts.googleapis.com/css2?family=${query}&display=swap`,
@@ -38,5 +39,5 @@ for (const [family, query, directory] of [
 }
 await writeFile("public/fonts/portfolio-fonts.css", stylesheet);
 console.log(
-  "Manrope and Instrument Serif downloaded and self-hosted with licenses.",
+  "Portfolio fonts downloaded and self-hosted with licenses.",
 );
