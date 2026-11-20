@@ -3,6 +3,7 @@ import { AnimatePresence, m, useReducedMotion } from "framer-motion";
 import { profile } from "../data/portfolio";
 const links = [
   ["Projects", "projects"],
+  ["Experience", "experience"],
   ["About", "aboutme"],
   ["Contact", "contact"],
 ];
@@ -64,7 +65,7 @@ export default function Navigation() {
           href={profile.resume}
           download="Muhammad-Yassa-Resume.pdf"
         >
-          Resume <span aria-hidden="true">↗</span>
+          Resume
         </a>
         <button
           ref={toggle}
@@ -97,7 +98,7 @@ export default function Navigation() {
           >
             {items}
             <a href={profile.resume} download="Muhammad-Yassa-Resume.pdf">
-              Resume <span aria-hidden="true">↗</span>
+              Resume
             </a>
           </m.nav>
         )}

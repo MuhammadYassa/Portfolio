@@ -13,7 +13,6 @@ export default function Contact() {
           <p>For opportunities, project questions, or just to say hello.</p>
           <a className="email-link" href={`mailto:${profile.email}`}>
             {profile.email}
-            <span aria-hidden="true">↗</span>
           </a>
         </div>
         <div className="contact-links">
@@ -23,7 +22,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub <span aria-hidden="true">↗</span>
+            GitHub
           </a>
           <a
             className="text-link"
@@ -31,14 +30,14 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn <span aria-hidden="true">↗</span>
+            LinkedIn
           </a>
           <a
             className="text-link"
             href={profile.resume}
             download="Muhammad-Yassa-Resume.pdf"
           >
-            Resume <span aria-hidden="true">↗</span>
+            Resume
           </a>
         </div>
       </Reveal>

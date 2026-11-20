@@ -50,7 +50,7 @@ for (const width of [1440, 390]) {
       } else {
         const cta = page.getByRole("link", { name: "View projects" });
         await cta.hover();
-        await expect(cta).toHaveCSS("background-color", "rgb(207, 188, 255)");
+        await expect(cta).toHaveCSS("background-color", "rgb(243, 238, 229)");
         await cta.click();
       }
       await page.locator(".screenshot-showcase").scrollIntoViewIfNeeded();

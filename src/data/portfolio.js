@@ -85,7 +85,6 @@ export const projects = [
       "Transactional staging-to-silver merges are idempotent: repeat runs create no duplicates or unnecessary updates.",
       "Advisory locks, retries, rollback, and recovery protect failed or overlapping imports.",
     ],
-    note: "Still ahead: additional datasets, address resolution, and grounded AI functionality. These are planned, not completed features.",
   },
   {
     id: "renter",

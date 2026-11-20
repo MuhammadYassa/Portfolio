@@ -1,10 +1,10 @@
 .kinetic-name {
   container-type: inline-size;
-  max-width: 650px;
+  max-width: 840px;
 }
 .hero h1.kinetic-stage {
   font-family: "Bricolage Grotesque", Manrope, sans-serif;
-  font-size: clamp(2.5rem, 17.1cqi, 6.9rem);
+  font-size: clamp(2.5rem, 17.1cqi, 9.1rem);
   font-weight: 800;
   font-style: normal;
   font-optical-sizing: auto;
@@ -13,14 +13,16 @@
   white-space: normal;
   position: relative;
   isolation: isolate;
-  padding-block: 10px 12px;
+  padding-block: 10px 16px;
+  color: var(--cream);
 }
 .kinetic-art { display: block; }
 .kinetic-word {
   display: flex;
   width: max-content;
 }
-.kinetic-word + .kinetic-word { color: var(--accent); }
+.kinetic-word + .kinetic-word { color: var(--lime); }
+.kinetic-word:last-child .kinetic-slot:last-child { color: var(--coral); }
 .kinetic-slot {
   position: relative;
   display: block;
@@ -32,6 +34,7 @@
 .kinetic-letter {
   display: block;
   transform-origin: 50% 68%;
+  text-shadow: 3px 3px 0 var(--ink), 4px 4px 0 #736b80;
 }
 .kinetic-slot::before {
   content: attr(data-letter);
@@ -48,7 +51,7 @@
   opacity: 0.2;
 }
 .kinetic-stage[data-grabbing] .kinetic-slot { cursor: grabbing; }
-.kinetic-slot[data-held] { z-index: 2; color: #d9cdff; }
+.kinetic-slot[data-held] { z-index: 2; color: var(--lilac); }
 .kinetic-stage[data-moving] .kinetic-letter { will-change: transform; }
 .kinetic-stage[data-ink="true"] .kinetic-word:first-child { color: var(--accent); }
 .kinetic-stage[data-ink="true"] .kinetic-word:last-child { color: var(--text); }
@@ -58,19 +61,22 @@
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 12px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .kinetic-pluck {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   min-height: 44px;
-  padding: 0 2px;
-  background: transparent;
-  color: var(--accent);
-  border-radius: 3px;
+  padding: 8px 12px;
+  background: var(--lilac);
+  color: var(--ink);
+  border: var(--border);
+  box-shadow: 3px 3px 0 var(--cream);
+  transition: transform var(--ui-time), box-shadow var(--ui-time);
 }
-.kinetic-pluck:hover { color: #e0d4ff; }
+.kinetic-pluck:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--cream); }
+.kinetic-pluck:active { transform: translate(3px, 3px); box-shadow: none; }
 .kinetic-pluck svg { transition: transform 0.25s; }
 .kinetic-pluck:hover svg { transform: rotate(45deg); }
 .kinetic-drag-hint { color: var(--muted); }
@@ -86,8 +92,8 @@
   border: 0;
 }
 @media (max-width: 850px) and (min-width: 701px) {
-  .kinetic-name { max-width: 580px; }
-  .hero h1.kinetic-stage { font-size: 5.9rem; }
+  .kinetic-name { max-width: 680px; }
+  .hero h1.kinetic-stage { font-size: clamp(2.5rem, 17.1cqi, 8rem); }
 }
 @media (max-width: 700px) {
   .hero h1.kinetic-stage { font-size: clamp(2.5rem, 17.2cqi, 5.6rem); }

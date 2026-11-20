@@ -12,7 +12,7 @@ function ProjectLinks({ project }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit WatchMate <span aria-hidden="true">↗</span>
+          Visit WatchMate
         </a>
       )}
       <a
@@ -21,7 +21,7 @@ function ProjectLinks({ project }) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        GitHub <span aria-hidden="true">↗</span>
+        GitHub
       </a>
     </div>
   );
@@ -82,7 +82,7 @@ function ScreenshotViewer() {
           />
         </AnimatePresence>
         <span className="enlarge-hint" aria-hidden="true">
-          View screenshot ↗
+          View screenshot
         </span>
       </button>
       <p className="image-caption">
@@ -251,9 +251,6 @@ export default function Projects() {
     >
       <div className="section-heading">
         <h2 id="projects-title">Projects</h2>
-        <span className="section-count" aria-hidden="true">
-          01 — 03
-        </span>
       </div>
       <article
         className="watchmate-project"
@@ -261,9 +258,7 @@ export default function Projects() {
         aria-labelledby="watchmate-title"
       >
         <div className="project-heading">
-          <span className="project-index" aria-hidden="true">
-            01 /
-          </span>
+          <span className="project-index">Featured project</span>
           <h3 id="watchmate-title">WatchMate</h3>
           <span className="status live">
             <span className="live-dot" aria-hidden="true" />
@@ -302,9 +297,7 @@ export default function Projects() {
       >
         <Reveal className="housing-copy">
           <div className="project-heading">
-            <span className="project-index" aria-hidden="true">
-              02 /
-            </span>
+            <span className="project-index">Data engineering</span>
             <span className="status">In development</span>
           </div>
           <h3 id="housing-title">
@@ -319,7 +312,6 @@ export default function Projects() {
               <li key={text}>{text}</li>
             ))}
           </ul>
-          <p className="project-note">{housing.note}</p>
           <Technologies items={housing.technologies} />
         </Reveal>
         <Reveal className="housing-diagram" delay={0.08}>
@@ -334,9 +326,7 @@ export default function Projects() {
         >
           <div className="renter-intro">
             <div className="project-heading">
-              <span className="project-index" aria-hidden="true">
-                03 /
-              </span>
+              <span className="project-index">Full-stack</span>
               <span className="status">{renter.status}</span>
             </div>
             <h3 id="renter-title">{renter.name}</h3>

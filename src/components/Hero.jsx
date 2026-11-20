@@ -10,20 +10,23 @@ export default function Hero() {
           {profile.location}
         </p>
         <KineticName name={profile.name} />
-        <p className="hero-role">{profile.role}</p>
       </div>
       <Reveal delay={0.1} className="hero-introduction">
+        <div className="hero-emblem" aria-hidden="true">
+          <span>BASED IN<br />NEW YORK</span>
+        </div>
+        <p className="hero-role">{profile.role}</p>
         <p>{profile.introduction}</p>
         <div className="hero-actions">
           <a className="button primary" href="#projects">
-            View projects <span aria-hidden="true">↓</span>
+            View projects
           </a>
           <a
             className="text-link resume-link"
             href={profile.resume}
             download="Muhammad-Yassa-Resume.pdf"
           >
-            Download Resume <span aria-hidden="true">↗</span>
+            Download Resume
           </a>
         </div>
       </Reveal>
